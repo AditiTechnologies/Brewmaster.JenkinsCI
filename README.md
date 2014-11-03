@@ -17,7 +17,7 @@ This template auto installs the following plugins:
 4.	**Git-Server** - This plugin wraps the server-side functionality of JGit so that other plugins can easily expose Git repositories from Jenkins via its SSH transport and HTTP in a collaborative fashion.
 
 ###Limitations
-The template does not configure security for jenkins. As soon as the template completes execution, access the Jenkins web portal immediately to setup the administrator. Refer [Jenkins security setup] for more details.
+The template does not configure security for jenkins. As soon as the template completes execution, access the Jenkins web portal immediately to setup the administrator. Refer [Jenkins security setup](https://wiki.jenkins-ci.org/display/JENKINS/Standard+Security+Setup) for more details.
 
 ###References
 Please refer to the following links for more information on Jenkins installation and configuration.
