@@ -60,14 +60,14 @@ function Set-TargetResource
         Write-Verbose "Successfully downloaded nunit plugin."
     }        
 
-    $gitHpiPath = "$JenkinsPluginsFolder" + "\github.hpi"
+    $gitHpiPath = "$JenkinsPluginsFolder" + "\git.hpi"
     Write-Verbose "Github hpi path: $gitHpiPath"
-    if(-Not (JenkinsPluginExists $InstalledPlugins "github")) {
+    if(-Not (JenkinsPluginExists $InstalledPlugins "git")) {
         Write-Verbose "Downloading git plugin..."
         $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git.hpi", $gitHpiPath)
         Write-Verbose "Successfully downloaded git plugin."
     }
-
+ 
     $gitClientHpiPath = "$JenkinsPluginsFolder" + "\git-client.hpi"
     Write-Verbose "Git Client hpi path: $gitClientHpiPath"
     if(-Not (JenkinsPluginExists $InstalledPlugins "git-client")){
