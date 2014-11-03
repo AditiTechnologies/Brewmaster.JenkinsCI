@@ -1,0 +1,7 @@
+#pragma namespace("\\\\.\\root\\microsoft\\windows\\DesiredStateConfiguration")
+
+[ClassVersion("1.0.0"), FriendlyName("xJenkinsPlugins")] 
+class ADITI_xJenkinsPlugins : OMI_BaseResource
+{
+	[key, Description("Jenkins path.")] string JenkinsPath;	
+};
