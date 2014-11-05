@@ -1,4 +1,4 @@
-sfunction GetScript
+function GetScript
 {
     param
     (
