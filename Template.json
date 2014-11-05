@@ -350,16 +350,17 @@
                     }
                 },
                 {
-                    "Type": "xInstallProduct",
-                    "ImportModule": "xInstallWebPIFeed",
-                    "ImportTypeName": "ADITI_xInstallProduct",
-                    "Name": "InstallAzurePowershell",
-                    "Args": {
-                        "ProductTitleOrId": "WindowsAzurePowershell"
-                    },
-                    "Requires": [
-                        "[Package]InstallWebPI"
-                    ]
+                  "Credential": "vmadmin",        
+                  "Args": "-ProductId WindowsAzurePowershell -Log $env:BrewmasterDir\\Logs\\WindowsAzurePowershell-Install.log",        
+                  "ScriptFileName": "InstallWebPIProduct.ps1",
+                  "Type": "ScriptFile",
+                  "ImportModule": null,
+                  "ImportTypeName": null,
+                  "Name": "InstallProduct",
+                  "Requires": [
+                     "[Package]InstallWebPI"
+                  ],
+                  "Description": null
                 }
             ]
         }
