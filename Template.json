@@ -1,5 +1,5 @@
 {
-    "Name": "JenkinsSetup",
+    "Name": "Jenkins",
     "Description": "Setup Jenkins server on Microsoft Azure",
     "Version": "1.0.0",
     "Parameters": [
