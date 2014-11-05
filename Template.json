@@ -131,8 +131,8 @@
                 {
                     "Name": "JenkinsWebUI",
                     "LocalPort": "8080",
-                    "Protocol": "http",
-                    "Port": "80"                   
+                    "Protocol": "tcp",
+                    "Port": "80"                                
                 }
             ],
             "ConfigurationIds": [
@@ -264,7 +264,7 @@
                     "Name": "JenkinsWebAccess",
                     "Description": "Jenkins online portal access",
                     "LocalPort": "8080",
-                    "Protocol": "HTTP",
+                    "Protocol": "TCP",
                     "Access": "Allow",
                     "State": "Enabled",
                     "Direction": "Inbound"
