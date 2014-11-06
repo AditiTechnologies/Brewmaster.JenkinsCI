@@ -25,7 +25,7 @@ The template auto installs Microsoft Azure SDK for cloud deployments.
 
 ###Limitations
 1. The template does not configure security for jenkins. As soon as the template completes execution, access the Jenkins web portal immediately to setup the security. Refer [Jenkins security setup](https://wiki.jenkins-ci.org/display/JENKINS/Standard+Security+Setup) for more details.
-2. The template does **not configure SSL** for jenkins portal, in case SSL is required this should be done manually by remote logging into the virtual machine once the deployment completes. 
+2. The template does **not configure SSL** for jenkins portal, in case SSL is required this should be done manually on the virtual machine once the deployment completes.
 
 ###References
 Please refer to the following links for more information on Jenkins installation and configuration.
