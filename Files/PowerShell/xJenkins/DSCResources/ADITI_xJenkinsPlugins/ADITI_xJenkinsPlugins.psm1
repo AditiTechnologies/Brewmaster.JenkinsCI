@@ -61,28 +61,13 @@ function Set-TargetResource
     }        
 
     $gitHpiPath = "$JenkinsPluginsFolder" + "\git.hpi"
-    Write-Verbose "Github hpi path: $gitHpiPath"
+    Write-Verbose "Git hpi path: $gitHpiPath"
     if(-Not (JenkinsPluginExists $InstalledPlugins "git")) {
         Write-Verbose "Downloading git plugin..."
         $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git.hpi", $gitHpiPath)
         Write-Verbose "Successfully downloaded git plugin."
     }
- 
-    $gitClientHpiPath = "$JenkinsPluginsFolder" + "\git-client.hpi"
-    Write-Verbose "Git Client hpi path: $gitClientHpiPath"
-    if(-Not (JenkinsPluginExists $InstalledPlugins "git-client")){
-        $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git-client.hpi", $gitClientHpiPath)
-        Write-Verbose "Successfully downloaded git-client plugin."
-    }        
-
-    $gitServerHpiPath = "$JenkinsPluginsFolder" + "\git-server.hpi"
-    Write-Verbose "Git server hpi path: $gitServerHpiPath"
-    if(-Not (JenkinsPluginExists $InstalledPlugins "git-server")) {
-        Write-Verbose "Downloading git-server plugin..."         
-        $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git-server.hpi", $gitServerHpiPath)
-        Write-Verbose "Successfully downloaded git-server plugin."    
-    }        
-
+    
     Write-Verbose "Plugins downloaded successfully."    
 }
 
