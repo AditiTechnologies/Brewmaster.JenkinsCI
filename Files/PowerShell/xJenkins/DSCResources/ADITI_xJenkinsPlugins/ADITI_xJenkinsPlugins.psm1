@@ -60,20 +60,12 @@ function Set-TargetResource
         Write-Verbose "Successfully downloaded nunit plugin."
     }        
 
-    $gitHpiPath = "$JenkinsPluginsFolder" + "\git.hpi"
-    Write-Verbose "Github hpi path: $gitHpiPath"
-    if(-Not (JenkinsPluginExists $InstalledPlugins "git")) {
-        Write-Verbose "Downloading git plugin..."
-        $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git.hpi", $gitHpiPath)
-        Write-Verbose "Successfully downloaded git plugin."
-    }
- 
     $gitClientHpiPath = "$JenkinsPluginsFolder" + "\git-client.hpi"
     Write-Verbose "Git Client hpi path: $gitClientHpiPath"
     if(-Not (JenkinsPluginExists $InstalledPlugins "git-client")){
         $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git-client.hpi", $gitClientHpiPath)
         Write-Verbose "Successfully downloaded git-client plugin."
-    }        
+    } 
 
     $gitServerHpiPath = "$JenkinsPluginsFolder" + "\git-server.hpi"
     Write-Verbose "Git server hpi path: $gitServerHpiPath"
@@ -81,7 +73,23 @@ function Set-TargetResource
         Write-Verbose "Downloading git-server plugin..."         
         $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git-server.hpi", $gitServerHpiPath)
         Write-Verbose "Successfully downloaded git-server plugin."    
-    }        
+    }
+
+    $scmapiHpiPath = "$JenkinsPluginsFolder" + "\scm-api.hpi"
+    Write-Verbose "scm api hpi path: $scmapiHpiPath"
+    if(-Not (JenkinsPluginExists $InstalledPlugins "scm-api")) {
+        Write-Verbose "Downloading scm-api plugin..."         
+        $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/scm-api.hpi", $scmapiHpiPath)
+        Write-Verbose "Successfully downloaded scm-api plugin."
+    }
+
+    $gitHpiPath = "$JenkinsPluginsFolder" + "\git.hpi"
+    Write-Verbose "Github hpi path: $gitHpiPath"
+    if(-Not (JenkinsPluginExists $InstalledPlugins "git")) {
+        Write-Verbose "Downloading git plugin..."
+        $webClient.DownloadFile("http://updates.jenkins-ci.org/latest/git.hpi", $gitHpiPath)
+        Write-Verbose "Successfully downloaded git plugin."
+    }
 
     Write-Verbose "Plugins downloaded successfully."    
 }
